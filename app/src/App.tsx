@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ContextProvider, Context } from "./contextProvider";
+import { Landing } from "./pages/Landing";
+import { Theme } from "./Theme";
+import "./App.css";
 
-const App = () => {
+const App = (): React.ReactNode => {
   return (
-    <div>
-      <h1>Hello world!</h1>
-    </div>
+    <ContextProvider>
+      <div>
+        <Theme />
+        <Landing />
+      </div>
+    </ContextProvider>
   );
 };
 
